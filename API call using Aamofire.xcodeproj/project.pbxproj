@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,13 @@
 		490A717523E72C2000B8CB29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490A717323E72C2000B8CB29 /* Main.storyboard */; };
 		490A717723E72C2400B8CB29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 490A717623E72C2400B8CB29 /* Assets.xcassets */; };
 		490A717A23E72C2400B8CB29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490A717823E72C2400B8CB29 /* LaunchScreen.storyboard */; };
+		490A718323E72FF800B8CB29 /* NetworkMAnager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490A718223E72FF800B8CB29 /* NetworkMAnager.swift */; };
+		49587DA323EC83BE0001718B /* GETMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49587DA223EC83BE0001718B /* GETMethodModel.swift */; };
+		E2C78838358B071FC4FD5311 /* Pods_API_call_using_Aamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C5B6B5D52761D14370D175 /* Pods_API_call_using_Aamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40C5B6B5D52761D14370D175 /* Pods_API_call_using_Aamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_API_call_using_Aamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		490A716A23E72C2000B8CB29 /* API call using Aamofire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "API call using Aamofire.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		490A716D23E72C2000B8CB29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		490A716F23E72C2000B8CB29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,10 @@
 		490A717623E72C2400B8CB29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		490A717923E72C2400B8CB29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		490A717B23E72C2400B8CB29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		490A718223E72FF800B8CB29 /* NetworkMAnager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMAnager.swift; sourceTree = "<group>"; };
+		49587DA223EC83BE0001718B /* GETMethodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GETMethodModel.swift; sourceTree = "<group>"; };
+		7D11699429C826D15BAE9AA3 /* Pods-API call using Aamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-API call using Aamofire.debug.xcconfig"; path = "Target Support Files/Pods-API call using Aamofire/Pods-API call using Aamofire.debug.xcconfig"; sourceTree = "<group>"; };
+		870EC04AAB85A001C4837255 /* Pods-API call using Aamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-API call using Aamofire.release.xcconfig"; path = "Target Support Files/Pods-API call using Aamofire/Pods-API call using Aamofire.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2C78838358B071FC4FD5311 /* Pods_API_call_using_Aamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20F883FB39C3F2B742DD526C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40C5B6B5D52761D14370D175 /* Pods_API_call_using_Aamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		490A716123E72C2000B8CB29 = {
 			isa = PBXGroup;
 			children = (
 				490A716C23E72C2000B8CB29 /* API call using Aamofire */,
 				490A716B23E72C2000B8CB29 /* Products */,
+				5AFA39DF0283CD3FF310053B /* Pods */,
+				20F883FB39C3F2B742DD526C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +77,56 @@
 			children = (
 				490A716D23E72C2000B8CB29 /* AppDelegate.swift */,
 				490A716F23E72C2000B8CB29 /* SceneDelegate.swift */,
-				490A717123E72C2000B8CB29 /* ViewController.swift */,
-				490A717323E72C2000B8CB29 /* Main.storyboard */,
+				49587D9F23EC803C0001718B /* Models */,
+				49587DA023EC80470001718B /* Views */,
+				49587DA123EC80500001718B /* Controllers */,
+				490A718123E72FDE00B8CB29 /* Network Handlers */,
 				490A717623E72C2400B8CB29 /* Assets.xcassets */,
 				490A717823E72C2400B8CB29 /* LaunchScreen.storyboard */,
 				490A717B23E72C2400B8CB29 /* Info.plist */,
 			);
 			path = "API call using Aamofire";
+			sourceTree = "<group>";
+		};
+		490A718123E72FDE00B8CB29 /* Network Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				490A718223E72FF800B8CB29 /* NetworkMAnager.swift */,
+			);
+			path = "Network Handlers";
+			sourceTree = "<group>";
+		};
+		49587D9F23EC803C0001718B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				49587DA223EC83BE0001718B /* GETMethodModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		49587DA023EC80470001718B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				490A717323E72C2000B8CB29 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		49587DA123EC80500001718B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				490A717123E72C2000B8CB29 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5AFA39DF0283CD3FF310053B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7D11699429C826D15BAE9AA3 /* Pods-API call using Aamofire.debug.xcconfig */,
+				870EC04AAB85A001C4837255 /* Pods-API call using Aamofire.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +136,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 490A717E23E72C2400B8CB29 /* Build configuration list for PBXNativeTarget "API call using Aamofire" */;
 			buildPhases = (
+				1722A5EBC6EEED7917ECF7F5 /* [CP] Check Pods Manifest.lock */,
 				490A716623E72C2000B8CB29 /* Sources */,
 				490A716723E72C2000B8CB29 /* Frameworks */,
 				490A716823E72C2000B8CB29 /* Resources */,
+				6CEA6D5F482708DCFCD331B8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,12 +197,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1722A5EBC6EEED7917ECF7F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-API call using Aamofire-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CEA6D5F482708DCFCD331B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-API call using Aamofire/Pods-API call using Aamofire-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-API call using Aamofire/Pods-API call using Aamofire-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-API call using Aamofire/Pods-API call using Aamofire-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		490A716623E72C2000B8CB29 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				490A718323E72FF800B8CB29 /* NetworkMAnager.swift in Sources */,
 				490A717223E72C2000B8CB29 /* ViewController.swift in Sources */,
+				49587DA323EC83BE0001718B /* GETMethodModel.swift in Sources */,
 				490A716E23E72C2000B8CB29 /* AppDelegate.swift in Sources */,
 				490A717023E72C2000B8CB29 /* SceneDelegate.swift in Sources */,
 			);
@@ -282,6 +390,7 @@
 		};
 		490A717F23E72C2400B8CB29 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D11699429C826D15BAE9AA3 /* Pods-API call using Aamofire.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +409,7 @@
 		};
 		490A718023E72C2400B8CB29 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 870EC04AAB85A001C4837255 /* Pods-API call using Aamofire.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,6 @@
+framework module Pods_API_call_using_Aamofire {
+  umbrella header "Pods-API call using Aamofire-umbrella.h"
+
+  export *
+  module * { export * }
+}
